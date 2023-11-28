@@ -5,4 +5,5 @@ public class Input
     public decimal Kilometers { get; set; }
     public decimal Hours { get; set; }
     public decimal Income { get; set; }
+    public decimal TargetProfitMargin { get; set; }
 }

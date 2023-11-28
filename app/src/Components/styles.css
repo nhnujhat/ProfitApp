@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Times New Roman', serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,47 +7,55 @@ body {
 
 h1 {
   text-align: center;
-  padding: 10px;
-  background-color: #acb0ac;
-  color: white;
-}
-
-h2 {
-  text-align: center;
-  color: black;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: white;
+  color: #4f95be;
+  font-weight: bold;
 }
 
 form {
-  max-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
+  padding: 20px;
+  background-color: white;
 }
 
 label {
   display: block;
+  font-weight: bold;
 }
 
 input {
   width: 100%;
   padding: 10px;
+  margin-top: 10px;
   box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
-  width: 200px;
-  background-color: #acb0ac;
+  width: 100%;
+  background-color: #4f95be;
   color: white;
   padding: 10px;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
-  display: block;
-  margin: 0 auto;
+  font-weight: bold;
 }
 
 .result {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;;
-  text-align: center;
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: white;
+}
+
+.result p {
+  margin: 10px 0;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {

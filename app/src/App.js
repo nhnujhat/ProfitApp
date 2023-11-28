@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Profitability</h1>
+      <h1>Profitability Calculator</h1>
       <Form onSubmit={calculateProfitability} />
       {result && <Result result={result} />}
     </div>

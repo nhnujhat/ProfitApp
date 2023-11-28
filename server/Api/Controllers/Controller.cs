@@ -14,7 +14,6 @@ namespace Api.Controllers
         }
 
         [HttpPost("calculate-profitability")]
-        
         public ActionResult<Result> CalculateProfitability([FromBody] Input input)
         {
             if (!ModelState.IsValid)

@@ -8,6 +8,7 @@ const Form = ({ onSubmit }) => {
     kilometers: "",
     hours: "",
     income: "",
+    targetProfitMargin: "",
   });
 
   const handleChange = (e) => {
@@ -30,6 +31,7 @@ const Form = ({ onSubmit }) => {
       kilometers: parseFloat(formData.kilometers),
       hours: parseFloat(formData.hours),
       income: parseFloat(formData.income),
+      targetProfitMargin: parseFloat(formData.targetProfitMargin),
     };
 
     onSubmit(convertedData);
@@ -37,27 +39,30 @@ const Form = ({ onSubmit }) => {
 
   return (
     <div>
-      <h2>Input values</h2>
       <form className="form" onSubmit={handleSubmit}>
         <label>
-          Price per Kilometer:
+          Price per Kilometer (€):
           <br />
           <input
-            type="number"
+            type="text"
             name="pricePerKilometer"
             value={formData.pricePerKilometer}
             onChange={handleChange}
+            inputMode="decimal"
+            pattern="[0-9]+([.][0-9]+)?"
           />
         </label>
         <br />
         <label>
-          Price per Hour:
+          Price per Hour (€):
           <br />
           <input
-            type="number"
+            type="text"
             name="pricePerHour"
             value={formData.pricePerHour}
             onChange={handleChange}
+            inputMode="decimal"
+            pattern="[0-9]+([.][0-9]+)?"
           />
         </label>
         <br />
@@ -65,10 +70,12 @@ const Form = ({ onSubmit }) => {
           Kilometers:
           <br />
           <input
-            type="number"
+            type="text"
             name="kilometers"
             value={formData.kilometers}
             onChange={handleChange}
+            inputMode="decimal"
+            pattern="[0-9]+([.][0-9]+)?"
           />
         </label>
         <br />
@@ -76,21 +83,38 @@ const Form = ({ onSubmit }) => {
           Hours:
           <br />
           <input
-            type="number"
+            type="text"
             name="hours"
             value={formData.hours}
             onChange={handleChange}
+            inputMode="decimal"
+            pattern="[0-9]+([.][0-9]+)?"
           />
         </label>
         <br />
         <label>
-          Income:
+          Income (€):
           <br />
           <input
-            type="number"
+            type="text"
             name="income"
             value={formData.income}
             onChange={handleChange}
+            inputMode="decimal"
+            pattern="[0-9]+([.][0-9]+)?"
+          />
+        </label>
+        <br />
+        <label>
+          Target profit Margin (%):
+          <br />
+          <input
+            type="text"
+            name="targetProfitMargin"
+            value={formData.targetProfitMargin}
+            onChange={handleChange}
+            inputMode="decimal"
+            pattern="[0-9]+([.][0-9]+)?"
           />
         </label>
         <br />

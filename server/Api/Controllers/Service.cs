@@ -9,14 +9,19 @@ public class Service
         decimal totalTimeCost = timeCost;
 
         decimal income = input.Income;
-        decimal profitability = income - (totalDistanceCost + totalTimeCost);
+        decimal profitabilityWithoutMargin = income - (totalDistanceCost + totalTimeCost);
+
+        decimal targetProfit = income * input.TargetProfitMargin / 100;
+
+        decimal profitabilityWithMargin = profitabilityWithoutMargin + targetProfit;
 
         return new Result
         {
             TotalDistanceCost = totalDistanceCost,
             TotalTimeCost = totalTimeCost,
             Income = income,
-            Profitability = profitability
+            ProfitabilityWithoutMargin = profitabilityWithoutMargin,
+            ProfitabilityWithMargin = profitabilityWithMargin
         };
     }
 }
